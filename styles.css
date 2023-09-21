@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -6,8 +10,13 @@ a {
     text-decoration: none;
     color: #F9FAF8;
 }
-
-
+a:hover {
+    color: #1DB954;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
 
 .header {
     display: flex;
@@ -17,6 +26,7 @@ a {
     height: 48px;
     margin-top: 0;
     padding: 0px 128px;
+
 }
 
 .links {
@@ -34,6 +44,7 @@ a {
 .hero {
     background-color: #1F2937;
     padding: 0px 128px;
+    flex: 1;
 }
 
 .hero-content {
@@ -56,5 +67,101 @@ a {
 }
 
 .concert-img {
-    box-shadow: 3px 3px 10px #F9FAF8;
+    box-shadow: 3px 3px 10px #1DB954;
+    flex-shrink: 1;
+}
+@media screen and (max-width: 700px) {
+    .concert-img {
+        display: none;
+    }
+}
+button {
+    width: 120px;
+    height: 50px;
+    background-color: #1F2937;
+    border-color: #1DB954;
+    border-radius: 3px;
+    color: #F9FAF8;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 15px;
+}
+button:hover {
+    background-color: #1DB954;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 128px;
+}
+h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    border-bottom: 2px dashed #1F2937;
+}
+.trending-items {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    gap: 64px;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.item {
+    max-width: 250px;
+}
+.artist-photos {
+    width: 250px;
+    height: 250px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid #1DB954;
+    background-color: #1F2937;
+}
+.artist-bio {
+    background-color: #1F2937;
+    border-radius: 5px;
+    color: #F9FAF8;
+    flex: 1;
+}
+.quote {
+    padding: 0px 128px;
+    background-color: #E5E7EB;
+    color: #1f2937;
+    font-family: 'Mooli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+.call-container {
+    display: flex;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+}
+.sign-up {
+    background-color: #1DB954;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 10px;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+    color: #E5E7EB;
+    height: 48px;
+    margin-top: 0;
+    padding: 0px 128px;
 }
